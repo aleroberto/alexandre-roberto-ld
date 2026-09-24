@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Alexandre Roberto">
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="#142338" stroke="#49657a" stroke-width="2"/>
+  <path fill="#f5f8fc" fill-rule="evenodd" d="M12 50 27 14h10l15 36H42l-3.3-8H25.3L22 50H12zm16.7-16h6.6L32 25.7 28.7 34z"/>
+  <path d="M26 40h12" stroke="#83ddf0" stroke-width="4" stroke-linecap="round"/>
+</svg>
