@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa visual da solução de BI</title>
+  <desc id="desc">Fontes Oracle, SQL Server, APIs e arquivos consolidadas em camada analítica e consumidas no Power BI para fechamento mensal.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#0b1422"/><stop offset="1" stop-color="#10243b"/></linearGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/></filter></defs>
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <text x="70" y="95" fill="#8ce1f1" font-family="IBM Plex Mono, monospace" font-size="28" font-weight="600">MAPA VISUAL DA SOLUÇÃO</text>
+  <text x="70" y="150" fill="#f2f7fb" font-family="DM Sans, Arial" font-size="54" font-weight="800">Do dado disperso ao fechamento mensal</text>
+  <text x="70" y="200" fill="#b5c6d3" font-family="DM Sans, Arial" font-size="28">Consolidação, regras de negócio e modelagem para entregar indicadores confiáveis no primeiro dia útil.</text>
+  <g filter="url(#shadow)">
+    <rect x="90" y="290" width="420" height="420" rx="22" fill="#15263a" stroke="#35526c"/>
+    <text x="125" y="340" fill="#8ce1f1" font-family="IBM Plex Mono, monospace" font-size="22">FONTES</text>
+    <rect x="125" y="380" width="150" height="62" rx="14" fill="#1f4256"/><text x="162" y="419" fill="#fff" font-family="DM Sans, Arial" font-size="26" font-weight="700">Oracle</text>
+    <rect x="310" y="380" width="165" height="62" rx="14" fill="#1f4256"/><text x="334" y="419" fill="#fff" font-family="DM Sans, Arial" font-size="26" font-weight="700">SQL Server</text>
+    <rect x="125" y="470" width="150" height="62" rx="14" fill="#1f4256"/><text x="175" y="509" fill="#fff" font-family="DM Sans, Arial" font-size="26" font-weight="700">APIs</text>
+    <rect x="310" y="470" width="165" height="62" rx="14" fill="#1f4256"/><text x="346" y="509" fill="#fff" font-family="DM Sans, Arial" font-size="26" font-weight="700">CSV / TXT</text>
+    <text x="125" y="595" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">Ritmos de chegada diferentes</text>
+    <text x="125" y="630" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">e regras operacionais distintas.</text>
+
+    <rect x="590" y="250" width="420" height="500" rx="22" fill="#18304a" stroke="#4c708d"/>
+    <text x="625" y="300" fill="#9ce3f2" font-family="IBM Plex Mono, monospace" font-size="22">CAMADA ANALÍTICA</text>
+    <text x="625" y="360" fill="#fff" font-family="DM Sans, Arial" font-size="36" font-weight="700">Preparar e consolidar</text>
+    <text x="625" y="415" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">• SQL e transformações</text>
+    <text x="625" y="455" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">• recorte temporal coerente</text>
+    <text x="625" y="495" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">• granularidade definida</text>
+    <text x="625" y="535" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">• modelagem dimensional</text>
+    <text x="625" y="575" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">• leitura das regras de negócio</text>
+    <text x="625" y="635" fill="#8ce1f1" font-family="DM Sans, Arial" font-size="24" font-weight="700">Objetivo: totais defensáveis</text>
+
+    <rect x="1090" y="320" width="420" height="360" rx="22" fill="#15263a" stroke="#35526c"/>
+    <text x="1125" y="370" fill="#8ce1f1" font-family="IBM Plex Mono, monospace" font-size="22">CONSUMO</text>
+    <text x="1125" y="430" fill="#fff" font-family="DM Sans, Arial" font-size="36" font-weight="700">Power BI</text>
+    <text x="1125" y="480" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">Indicadores, KPIs e visão gerencial</text>
+    <text x="1125" y="515" fill="#c1d0dc" font-family="DM Sans, Arial" font-size="24">disponíveis no 1º dia útil.</text>
+    <rect x="1125" y="565" width="265" height="50" rx="12" fill="#214a3c"/>
+    <text x="1152" y="598" fill="#e4f9ef" font-family="DM Sans, Arial" font-size="22" font-weight="700">fechamento mensal confiável</text>
+  </g>
+  <path d="M515 500 H575" stroke="#85dced" stroke-width="10" stroke-linecap="round"/><path d="M1015 500 H1075" stroke="#85dced" stroke-width="10" stroke-linecap="round"/>
+</svg>

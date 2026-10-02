@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa visual da solução S3 para OCI</title>
+  <desc id="desc">Diagrama com origem no Amazon S3, orquestração no Azure Data Factory, staging no Azure Blob e entrega no OCI, além de Azure SQL e Kubernetes cronjob.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#0b1422"/><stop offset="1" stop-color="#0f2238"/></linearGradient>
+    <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#7dd9ee"/><stop offset="1" stop-color="#9aa2f6"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <text x="70" y="95" fill="#8ce1f1" font-family="IBM Plex Mono, monospace" font-size="28" font-weight="600">MAPA VISUAL DA SOLUÇÃO</text>
+  <text x="70" y="150" fill="#f2f7fb" font-family="DM Sans, Arial" font-size="54" font-weight="800">Integração diária com roteamento por cliente</text>
+  <text x="70" y="200" fill="#b5c6d3" font-family="DM Sans, Arial" font-size="28">Origem em S3, decisão no ADF, staging no Blob, entrega no OCI e publicação posterior no portal.</text>
+  
+  <g filter="url(#shadow)">
+    <rect x="80" y="300" width="240" height="180" rx="22" fill="#15263a" stroke="#33536c"/>
+    <text x="110" y="350" fill="#87daec" font-family="IBM Plex Mono, monospace" font-size="22">ORIGEM</text>
+    <text x="110" y="405" fill="#ffffff" font-family="DM Sans, Arial" font-size="34" font-weight="700">Amazon S3</text>
+    <text x="110" y="445" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="24">Parquet · D-1</text>
+    <text x="110" y="475" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="24">arquivos por cliente</text>
+
+    <rect x="390" y="270" width="280" height="240" rx="22" fill="#18304a" stroke="#49718d"/>
+    <text x="425" y="320" fill="#9de4f2" font-family="IBM Plex Mono, monospace" font-size="22">ORQUESTRAÇÃO</text>
+    <text x="425" y="375" fill="#ffffff" font-family="DM Sans, Arial" font-size="34" font-weight="700">Azure Data Factory</text>
+    <text x="425" y="420" fill="#c0d0db" font-family="DM Sans, Arial" font-size="23">Schedule Trigger</text>
+    <text x="425" y="452" fill="#c0d0db" font-family="DM Sans, Arial" font-size="23">ForEach + Lookup</text>
+    <text x="425" y="484" fill="#c0d0db" font-family="DM Sans, Arial" font-size="23">Copy + retry + log</text>
+
+    <rect x="740" y="300" width="240" height="180" rx="22" fill="#15263a" stroke="#33536c"/>
+    <text x="770" y="350" fill="#87daec" font-family="IBM Plex Mono, monospace" font-size="22">STAGING</text>
+    <text x="770" y="405" fill="#ffffff" font-family="DM Sans, Arial" font-size="34" font-weight="700">Azure Blob</text>
+    <text x="770" y="445" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="24">área intermediária</text>
+    <text x="770" y="475" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="24">recuperação e inspeção</text>
+
+    <rect x="1050" y="300" width="240" height="180" rx="22" fill="#15263a" stroke="#33536c"/>
+    <text x="1080" y="350" fill="#87daec" font-family="IBM Plex Mono, monospace" font-size="22">DESTINO</text>
+    <text x="1080" y="405" fill="#ffffff" font-family="DM Sans, Arial" font-size="34" font-weight="700">OCI Storage</text>
+    <text x="1080" y="445" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="24">malote do cliente</text>
+    <text x="1080" y="475" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="24">entrega final</text>
+  </g>
+  
+  <path d="M321 390 H385" stroke="url(#line)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M671 390 H735" stroke="url(#line)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M981 390 H1045" stroke="url(#line)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M378 390 l-18 -12 v24 z" fill="#8ce1f1"/>
+  <path d="M728 390 l-18 -12 v24 z" fill="#8ce1f1"/>
+  <path d="M1038 390 l-18 -12 v24 z" fill="#8ce1f1"/>
+  
+  <g filter="url(#shadow)">
+    <rect x="450" y="570" width="300" height="150" rx="20" fill="#12253b" stroke="#33536c"/>
+    <text x="480" y="617" fill="#87daec" font-family="IBM Plex Mono, monospace" font-size="22">TABELA DE DECISÃO</text>
+    <text x="480" y="668" fill="#ffffff" font-family="DM Sans, Arial" font-size="30" font-weight="700">Azure SQL Database</text>
+    <text x="480" y="705" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="22">cliente → malote OCI</text>
+
+    <rect x="850" y="570" width="360" height="150" rx="20" fill="#12253b" stroke="#33536c"/>
+    <text x="880" y="617" fill="#87daec" font-family="IBM Plex Mono, monospace" font-size="22">PUBLICAÇÃO POSTERIOR</text>
+    <text x="880" y="668" fill="#ffffff" font-family="DM Sans, Arial" font-size="30" font-weight="700">Kubernetes CronJob</text>
+    <text x="880" y="705" fill="#b0c2d0" font-family="DM Sans, Arial" font-size="22">staging → diretório do portal</text>
+  </g>
+  <path d="M530 566 C530 535 530 520 530 510" stroke="#6fcde0" stroke-width="6" stroke-dasharray="12 12"/>
+  <path d="M1030 566 C1030 535 1030 520 1030 510" stroke="#6fcde0" stroke-width="6" stroke-dasharray="12 12"/>
+</svg>
